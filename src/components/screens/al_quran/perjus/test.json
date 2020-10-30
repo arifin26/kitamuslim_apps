@@ -1,0 +1,35 @@
+[
+  {
+    "urutan": "101",
+    "latin": "Al-Qari'ah",
+    "arab": "القارعة",
+    "arti": "Hari Kiamat",
+    "text_arab": {
+      "verse_01": "اَلْقَارِعَةُۙ",
+      "verse_02": "مَا الْقَارِعَةُ ۚ",
+      "verse_03": "وَمَآ اَدْرٰىكَ مَا الْقَارِعَةُ ۗ",
+      "verse_04": "يَوْمَ يَكُوْنُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوْثِۙ",
+      "verse_05": "وَتَكُوْنُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوْشِۗ",
+      "verse_06": "فَاَمَّا مَنْ ثَقُلَتْ مَوَازِينُهٗۙ",
+      "verse_07": "فَهُوَ فِيْ عِيْشَةٍ رَّاضِيَةٍۗ",
+      "verse_08": "وَاَمَّا مَنْ خَفَّتْ مَوَازِيْنُهٗۙ",
+      "verse_09": "فَاُمُّهُ هَاوِيَةٌ  ۗ",
+      "verse_010": "وَمَآ اَدْرٰىكَ مَا هِيَهْۗ",
+      "verse_011": "نَارٌ حَامِيَةٌ ࣖ"
+    },
+
+    "text_arti": {
+      "verse_1": "Hari Kiamat,",
+      "verse_2": "Apakah hari Kiamat itu?",
+      "verse_3": "Dan tahukah kamu apakah hari Kiamat itu?",
+      "verse_4": "Pada hari itu manusia seperti laron yang beterbangan,",
+      "verse_5": "dan gunung-gunung seperti bulu yang dihambur-hamburkan.",
+      "verse_6": "Maka adapun orang yang berat timbangan (kebaikan)nya,",
+      "verse_7": "maka dia berada dalam kehidupan yang memuaskan (senang).",
+      "verse_8": "Dan adapun orang yang ringan timbangan (kebaikan)nya,",
+      "verse_9": "maka tempat kembalinya adalah neraka Hawiyah.",
+      "verse_10": "Dan tahukah kamu apakah neraka Hawiyah itu?",
+      "verse_11": "(Yaitu) api yang sangat panas."
+    }
+  }
+]

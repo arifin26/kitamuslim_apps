@@ -1,0 +1,747 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  StatusBar,
+  TouchableNativeFeedback,
+  Image,
+  ScrollView,
+  StyleSheet,
+  FlatList,
+} from 'react-native';
+
+export default class Persurat_2 extends React.Component {
+  constructor (props) {
+    super (props);
+    this.state = {
+      isLoading: true,
+      dataSource: [],
+      data1: [],
+    };
+  }
+
+  test = () => {
+    fetch ('https://masjidindonesia.000webhostapp.com/quran-json/2.json')
+      .then (response => response.json ())
+      .then (responseJson => {
+        console.log (responseJson);
+        this.setState ({isLoading: false, dataSource: responseJson});
+      })
+      .catch (err => console.log (err));
+  };
+  componentDidMount () {
+    this.test ();
+  }
+  _itemComponent = ({item}) => {
+    const {urutan, latin, arab, text_arab, text_arti, arti} = item;
+    return (
+      <View style={{flex: 1}}>
+
+        <View style={Styles.View1}>
+
+          <View style={Styles.View2}>
+
+            <View style={Styles.View5}>
+
+              <View style={Styles.View6}>
+
+                <Text style={Styles.teksurat}>{text_arab.verse_01}</Text>
+                <Text style={Styles.teksurat}>{text_arab.verse_02}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_03}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_04}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_05}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_06}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_07}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_08}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_09}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_010}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_011}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_012}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_013}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_014}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_015}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_016}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_017}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_018}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_019}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_020}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_021}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_022}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_023}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_024}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_025}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_026}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_027}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_028}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_029}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_030}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_031}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_032}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_033}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_034}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_035}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_036}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_037}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_038}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_039}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_040}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_041}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_042}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_043}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_044}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_045}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_046}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_047}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_048}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_049}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_050}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_051}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_052}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_053}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_054}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_055}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_056}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_057}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_058}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_059}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_060}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_061}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_062}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_063}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_064}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_065}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_066}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_067}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_068}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_069}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_070}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_071}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_072}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_073}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_074}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_075}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_076}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_077}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_078}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_079}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_080}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_081}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_082}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_083}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_084}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_085}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_086}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_087}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_088}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_089}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_090}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_091}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_092}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_093}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_094}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_095}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_096}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_097}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_098}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_099}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0100}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0101}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0102}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0103}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0104}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0105}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0106}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0107}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0108}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0109}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0110}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0111}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0112}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0113}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0114}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0115}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0116}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0117}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0118}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0119}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0120}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0121}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0122}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0123}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0124}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0125}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0126}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0127}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0128}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0129}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0130}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0131}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0132}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0133}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0134}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0135}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0136}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0137}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0138}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0139}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0140}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0141}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0142}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0143}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0144}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0145}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0146}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0147}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0148}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0149}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0150}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0151}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0152}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0153}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0154}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0155}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0156}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0157}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0158}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0159}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0160}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0161}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0162}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0163}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0164}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0165}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0166}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0167}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0168}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0169}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0170}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0171}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0172}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0173}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0174}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0175}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0176}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0177}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0178}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0179}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0180}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0181}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0182}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0183}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0184}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0185}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0186}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0187}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0188}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0189}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0190}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0191}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0192}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0193}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0194}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0195}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0196}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0197}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0198}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0199}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0200}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0201}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0202}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0203}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0204}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0205}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0206}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0207}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0208}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0209}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0210}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0211}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0212}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0213}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0214}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0215}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0216}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0217}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0218}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0219}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0220}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0221}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0222}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0223}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0224}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0225}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0226}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0227}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0228}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0229}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0230}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0231}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0232}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0233}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0234}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0235}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0236}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0237}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0238}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0239}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0240}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0241}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0242}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0243}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0244}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0245}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0246}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0247}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0248}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0249}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0250}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0251}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0252}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0253}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0254}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0255}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0256}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0257}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0258}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0259}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0260}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0261}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0262}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0263}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0264}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0265}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0266}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0267}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0268}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0269}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0270}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0271}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0272}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0273}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0274}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0275}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0276}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0277}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0278}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0279}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0280}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0281}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0282}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0283}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0284}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0285}</Text>
+<Text style={Styles.teksurat}>{text_arab.verse_0286}</Text>
+
+              </View>
+              <View style={{paddingTop: 10}}>
+                <Text style={Styles.tekarti}>Artinya :</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_1}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_2}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_3}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_4}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_5}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_6}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_7}</Text>
+                <Text style={Styles.teksurat}>{text_arti.verse_8}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_9}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_10}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_11}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_12}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_13}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_14}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_15}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_16}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_17}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_18}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_19}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_20}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_21}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_22}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_23}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_24}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_25}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_26}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_27}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_28}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_29}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_30}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_31}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_32}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_33}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_34}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_35}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_36}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_37}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_38}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_39}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_40}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_41}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_42}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_43}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_44}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_45}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_46}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_47}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_48}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_49}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_50}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_51}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_52}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_53}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_54}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_55}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_56}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_57}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_58}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_59}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_60}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_61}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_62}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_63}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_64}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_65}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_66}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_67}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_68}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_69}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_70}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_71}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_72}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_73}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_74}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_75}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_76}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_77}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_78}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_79}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_80}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_81}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_82}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_83}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_84}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_85}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_86}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_87}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_88}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_89}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_90}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_91}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_92}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_93}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_94}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_95}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_96}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_97}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_98}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_99}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_100}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_101}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_102}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_103}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_104}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_105}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_106}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_107}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_108}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_109}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_110}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_111}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_112}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_113}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_114}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_115}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_116}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_117}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_118}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_119}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_120}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_121}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_122}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_123}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_124}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_125}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_126}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_127}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_128}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_129}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_130}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_131}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_132}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_133}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_134}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_135}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_136}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_137}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_138}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_139}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_140}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_141}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_142}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_143}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_144}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_145}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_146}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_147}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_148}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_149}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_150}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_151}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_152}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_153}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_154}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_155}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_156}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_157}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_158}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_159}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_160}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_161}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_162}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_163}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_164}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_165}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_166}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_167}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_168}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_169}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_170}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_171}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_172}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_173}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_174}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_175}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_176}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_177}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_178}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_179}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_180}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_181}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_182}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_183}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_184}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_185}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_186}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_187}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_188}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_189}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_190}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_191}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_192}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_193}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_194}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_195}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_196}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_197}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_198}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_199}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_200}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_201}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_202}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_203}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_204}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_205}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_206}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_207}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_208}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_209}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_210}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_211}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_212}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_213}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_214}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_215}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_216}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_217}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_218}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_219}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_220}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_221}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_222}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_223}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_224}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_225}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_226}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_227}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_228}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_229}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_230}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_231}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_232}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_233}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_234}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_235}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_236}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_237}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_238}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_239}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_240}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_241}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_242}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_243}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_244}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_245}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_246}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_247}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_248}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_249}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_250}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_251}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_252}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_253}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_254}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_255}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_256}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_257}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_258}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_259}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_260}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_261}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_262}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_263}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_264}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_265}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_266}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_267}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_268}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_269}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_270}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_271}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_272}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_273}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_274}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_275}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_276}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_277}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_278}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_279}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_280}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_281}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_282}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_283}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_284}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_285}</Text>
+<Text style={Styles.teksurat}>{text_arti.verse_286}</Text>
+              </View>
+
+            </View>
+
+          </View>
+
+        </View>
+
+      </View>
+    );
+  };
+
+  render () {
+    return (
+      <View style={{flex: 1}}>
+        <StatusBar backgroundColor="#009688" barStyle="light-content" />
+        <View style={{flex: 1}}>
+          <View style={Styles.Search}>
+            <Text style={{color: '#fff'}}>
+            البقرة
+            </Text>
+          </View>
+          <View>
+            <FlatList
+              data={this.state.dataSource}
+              renderItem={this._itemComponent}
+              keyExtractor={(item, index) => item.toString ()}
+              onRefresh={this.test}
+              refreshing={this.state.isLoading}
+            />
+          </View>
+        </View>
+
+      </View>
+    );
+  }
+}
+
+const Styles = StyleSheet.create ({
+  bag2: {
+    height: 45,
+    width: 45,
+  },
+  teksurat: {
+    fontSize: 20,
+    padding: 10,
+  },
+  tekarti: {
+    fontSize: 10,
+    padding: 5,
+  },
+  Search: {
+    flexDirection: 'row',
+    height: 50,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#009688',
+    elevation: 20,
+  },
+  bag1: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+
+  bag5: {
+    flex: 1,
+    backgroundColor: '#b8860b',
+  },
+  bag6: {
+    height: 50,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
+  bag7: {
+    height: 50,
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  bag8: {
+    height: 45,
+    width: 45,
+  },
+  bag3: {
+    height: 50,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#7fffd4',
+    elevation: 20,
+  },
+  View1: {
+    paddingTop: 10,
+  },
+  View2: {
+    flexDirection: 'column',
+  },
+  View3: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+  },
+  View4: {
+    padding: 10,
+    backgroundColor: '#009688',
+    borderRadius: 100,
+    height: 40,
+    width: 40,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  View5: {
+    flexDirection: 'column',
+    paddingLeft: 10,
+  },
+  View6: {
+    paddingRight: 20,
+  },
+});
